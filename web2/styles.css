@@ -1,0 +1,476 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container .header {
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(229, 11, 11);
+}
+
+.container .header .header_logo_text {
+  margin-left: 350px;
+  width: 200px;
+  height: 70px;
+  background: url(images/logo.27b98a3a7aec.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.container .header .nav ul{
+  display: flex;
+  gap: 50px;
+   
+}
+.container .header .nav ul li{
+  font-size: 20px;
+  font-weight: 500;
+  list-style: none;
+  letter-spacing: 1px;
+} 
+.container .header .nav ul li a{ 
+  padding: 10px;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff;
+}  
+.container .header .nav ul li a:hover{
+  border-bottom: 2px solid #fefb4f;
+
+}
+
+.container .header .header_middle .post-ad-button {
+  background-color:rgb(253, 218, 13) ;
+  color: black;
+  padding: 10px 20px;
+  border: 0px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.container .header .header_middle .post-ad-button:hover {
+  background-color: rgb(133, 133, 3);
+  color: #3f6fb8;
+}
+
+
+.container .header .header_middle .back-button {
+  background-color:rgb(253, 218, 13) ;
+  color: black;
+  padding: 10px 20px;
+  border: 0px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.container .header .header_middle .back-button:hover {
+  background-color: rgb(133, 133, 3);
+  color: #3f6fb8;
+}
+
+.search-bar {
+  margin-left: 500px;
+  width: 3rem;
+  height: 3rem;
+  background-color: #fff;
+  border-radius: 8rem;
+  box-shadow: 0 1rem 6rem rgba(0, 0, 0, 0.6);
+  text-align: right;
+  position: relative;
+  transition: width 0.5s cubic-bezier(0.9, 0, 0.3, 0.9);
+}
+
+.change .search-bar {
+  width: 50rem;
+}
+
+.search-bar input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 3rem;
+  background-color: none;
+  padding: 1rem 7.5rem 1rem 2rem;
+  font-size: 2rem;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.change .search-bar input {
+  opacity: 1;
+  transition: opacity 0.5s 0.3s;
+}
+
+.container .search-bar i {
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  background-color: rgb(229, 11, 11);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.3s 0.3s;
+}
+
+.container .search-bar i:nth-child(3) {
+  opacity: 0;
+}
+
+.container .change .search-bar i:nth-child(3) {
+  opacity: 1;
+}
+
+.container .change .search-bar i:nth-child(2) {
+  opacity: 0;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+
+
+.product-img {
+  float: left;
+  height: 420px;
+  width: 327px;
+  margin-left: 30px;
+  
+}
+
+.product-img img {
+  border-radius: 37px 0 0 37px;
+}
+
+.product-info {
+  float: left;
+  height: 450px;
+  width: 327px;
+  margin-left: 30px; /* Adjusted margin */
+  box-shadow: 0px 0px 0px 5px rgba(229, 11, 11, 0.5); /* Outline effect */
+  -webkit-background-clip: padding-box; /* Clip background to padding-box */
+  background-clip: padding-box;
+  border-radius: 0 7px 10px 7px;
+  background-color: #ffffff;
+}
+
+.product-text {
+  height: 300px;
+  width: 327px;
+}
+
+.product-text h1 {
+  margin: 0 0 0 38px;
+  padding-top: 52px;
+  font-size: 34px;
+  color: #474747;
+}
+
+.product-text h1,
+.product-price-btn p {
+  font-family: 'Bentham', serif;
+}
+
+.product-text h2 {
+  margin: 0 0 47px 38px;
+  font-size: 13px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #474747;
+  letter-spacing: 0.2em;
+}
+
+.product-text p {
+  height: 125px;
+  margin: 0 0 0 38px;
+  font-family: 'Playfair Display', serif;
+  color: #8d8d8d;
+  line-height: 1.7em;
+  font-size: 15px;
+  font-weight: lighter;
+  overflow: hidden;
+}
+
+.product-price-btn {
+  height: 103px;
+  width: 360px;
+  margin-top: 17px;
+  position: relative;
+}
+
+.product-price-btn p {
+  display: inline-block;
+  position: absolute;
+  top: -13px;
+  height: 50px;
+  font-family: 'Trocchi', serif;
+  margin: 0 0 0 38px;
+  font-size: 70px;
+  font-weight: lighter;
+  color: #474747;
+}
+
+
+span {
+  display: inline-block;
+  height: 50px;
+  font-family: 'Suranna', serif;
+  font-size: 19px;
+}
+
+.product-price-btn button {
+  float: right;
+  display: inline-block;
+  height: 50px;
+  width: 176px;
+  margin: 0 40px 0 16px;
+  box-sizing: border-box;
+  border: transparent;
+  border-radius: 60px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  background-color: rgb(229, 11, 11);
+  cursor: pointer;
+  outline: none;
+}
+
+.product-price-btn button:hover {
+  background-color: rgb(253, 218, 13);
+} 
+.profile-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1px;
+}
+
+.profile-pictures {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.profile-picture img, .profile-pictures img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* styles.css */
+
+/* Additional CSS styles for profile section */
+.profile-section {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.profile-section h1 {
+  margin-bottom: 20px;
+}
+
+.profile-section label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.profile-section input[type="text"] {
+  width: calc(100% - 22px); /* Adjust width to fit within container */
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.profile-section button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+.profile-section button:hover {
+  background-color: #0056b3;
+}
+/* styles.css */
+
+/* Additional CSS styles for file input */
+.profile-section input[type="file"] {
+  display: none; /* Hide the default file input */
+}
+
+.profile-section .file-input-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin-bottom: 10px;
+}
+
+.profile-section .file-input-label:hover {
+  background-color: #0056b3;
+}
+ /* styles.css */
+
+ .row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container11 {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container11 {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 999; /* Ensure it appears on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px; /* Set max width for better responsiveness */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+i {
+  color: #9ABC66;
+  font-size: 100px;
+  line-height: 200px;
+  margin-left:50px;
+}

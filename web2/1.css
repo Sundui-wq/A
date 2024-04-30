@@ -1,0 +1,44 @@
+.container  .nov ul{
+    display: flex;
+    gap: 50px;
+     
+  }
+  .container  .nov ul li{
+    font-size: 15px;
+    font-weight: 500s;
+    list-style: none;
+    letter-spacing: 1px;
+  } 
+  .container  .nov ul li a{ 
+    padding: 10px;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    color: #000000;
+  }  
+  .container  .nov ul li a:hover{
+    border-bottom: 2px solid #7FFF4d;
+  
+  }
+  .container .footer {
+
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(229, 11, 11);
+    color: white;
+    text-align: center;
+   
+  }
+  
+  .container  .footer_logo_text {
+    margin-left: 350px;
+    width: 200px;
+    height: 70px;
+    background: url(/images/logo.27b98a3a7aec.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  
+  }

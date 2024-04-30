@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="1.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header_left">
+                <div class="header_logo_text"></div>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="about.html">Бидний тухай</a></li>
+                    <li><a href="contact.html">Холбогдох</a></li>
+                    <li><a href="profile.html">Нүүр</a></li>
+                </ul>
+            </div>
+            <!-- Profile Picture with class profile-picture -->
+            <div class="profile-picture">
+                <img id="profile-img1" src="images/default-avatar-icon-of-social-media-user-vector.jpg" alt="Profile Picture">
+            </div>
+            <div class="header_middle">
+                <a href="index.html" class="back-button">Back</a>
+            </div>
+        </div>
+
+        <div class="profile-section">
+            <h1><strong>Profile Settings</strong></h1><br>
+            <!-- Profile Picture with class profile-pictures -->
+            <div class="profile-pictures">
+                <img id="profile-img2" src="images/default-avatar-icon-of-social-media-user-vector.jpg" alt="Profile Picture">
+            </div>
+            <!-- Input for changing profile picture -->
+            <!-- HTML -->
+            <!-- Input for changing profile picture -->
+            <input type="file" accept="image/*" id="file-input">
+            <label class="file-input-label" for="file-input">Choose File</label>
+
+
+            <!-- Labels and input fields for first name and last name -->
+            <br><br><label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name"><br>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name"><br>
+
+            <!-- Save and Change Name buttons -->
+            <button id="save-button">Save</button>
+            <button id="change-name-button">Change Name</button>
+        </div>
+        <div class="footer">
+            <p>
+                Монголын номер нэг худалдааны сайт Үнэгүй.мн-д тавтай морилно уу. 
+                Та манай цахим хуудсаар дамжуулан худалдааны бүх төрлийн салбарт онлайн хэлбэрээр үйлчлүүлэх боломжтой. 
+                Бид таны цаг завыг хэмнэн нэг дор бүх төрлийн олон мянган зарыг нэгтгэсэн цогц зарын мэдээллийг хүргэж байна. 
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Function to save first name and last name in local storage
+        function saveName() {
+            const firstName = document.getElementById('first-name').value;
+            const lastName = document.getElementById('last-name').value;
+            
+            localStorage.setItem('firstName', firstName);
+            localStorage.setItem('lastName', lastName);
+
+            alert('Name saved successfully!');
+        }
+
+        // Function to handle Change Name button click
+        document.getElementById('change-name-button').addEventListener('click', function() {
+            const firstNameField = document.getElementById('first-name');
+            const lastNameField = document.getElementById('last-name');
+
+
+            firstNameField.removeAttribute('readonly');
+            lastNameField.removeAttribute('readonly');
+
+
+            firstNameField.focus();
+        });
+
+        // Function to handle file input change and update profile picture
+        function handleFileInputChange(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                // Save the image data to localStorage
+                localStorage.setItem('profilePicture', e.target.result);
+                // Display the selected image
+                document.getElementById('profile-img1').src = e.target.result;
+                document.getElementById('profile-img2').src = e.target.result;
+            }
+            reader.readAsDataURL(file);
+        }
+
+        // Event listener for file input change
+        document.getElementById('file-input').addEventListener('change', handleFileInputChange);
+
+        // Retrieve the profile picture and name from localStorage when the page loads
+        window.addEventListener('DOMContentLoaded', function() {
+            const savedProfilePicture = localStorage.getItem('profilePicture');
+            if (savedProfilePicture) {
+                document.getElementById('profile-img1').src = savedProfilePicture;
+                document.getElementById('profile-img2').src = savedProfilePicture;
+            }
+
+            const savedFirstName = localStorage.getItem('firstName');
+            const savedLastName = localStorage.getItem('lastName');
+
+            if (savedFirstName) {
+                document.getElementById('first-name').value = savedFirstName;
+            }
+            if (savedLastName) {
+                document.getElementById('last-name').value = savedLastName;
+            }
+            
+        });
+
+        // Save the name when the Save button is clicked
+        document.getElementById('save-button').addEventListener('click', saveName);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="em">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Ad Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function showPaymentSuccess() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "block";
+        }
+    
+        // This function will be called when the user clicks on the close button
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header_middle">
+                <a href="index.html" class="back-button">Back</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-75">
+                <div class="container11">
+                    <form action="/index.html" onsubmit="showPaymentSuccess(); return false;">
+
+                        <div class="row">
+                            <div class="col-50">
+                                <h3>Тооцооны хаяг</h3>
+                                <label for="fname">Овог Нэр</label>
+                                <input type="text" id="fname" name="firstname" placeholder="Гантулга Тэмүүлэн">
+                                <label for="email">Email</label>
+                                <input type="text" id="email" name="email" placeholder="tem@example.com">
+                                <label for="adr">Хаяг</label>
+                                <input type="text" id="adr" name="address" placeholder="Сүхбаатар 12 хороо">
+                                <label for="city">Хот</label>
+                                <input type="text" id="city" name="city" placeholder="Улаанбаатар">
+                                <div class="row">
+                                    <div class="col-50">
+                                        <label for="state">Дүүрэг</label>
+                                        <input type="text" id="state" name="state" placeholder="СХД">
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="zip">Zip</label>
+                                        <input type="text" id="zip" name="zip" placeholder="10001">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-50">
+                                <h3>Төлбөр</h3>
+                                <label for="cname">Картны нэр</label>
+                                <input type="text" id="cname" name="cardname" placeholder="Гантулга Тэмүүлэн">
+                                <label for="ccnum">Картны дугаар</label>
+                                <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                <label for="expmonth">Хугацаа дуусах сар </label>
+                                <input type="text" id="expmonth" name="expmonth" placeholder="9 нь сар">
+                                <div class="row">
+                                    <div class="col-50">
+                                        <label for="expyear">Хугацаа дуусах жил</label>
+                                        <input type="text" id="expyear" name="expyear" placeholder="2028">
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="cvv">Картны CVV</label>
+                                        <input type="text" id="cvv" name="cvv" placeholder="352">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="submit" value="Захиалга  батлах" class="btn">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="card2">
+                <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
+                  <i class="checkmark">✓</i>
+                </div>
+            <h1>Захиалга амжилттай</h1> 
+        <p>Бид таны худалдан авах хүсэлтийг хүлээн авлаа,<br>
+            Бид удахгүй холбогдох болно!</p>
+        </div>
+    </div>
+</body>
+
+</html>

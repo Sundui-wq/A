@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="em">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Ad Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="1.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header_left">
+                <div class="header_logo_text"></div>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">Бидний тухай</a></li>
+                    <li><a href="#">Холбогдох</a></li>
+                    <li><a href="#">Нүүр</a></li>
+                </ul>
+            </div>
+            <div class="header_middle">
+                <a href="index.html" class="back-button">Back</a>
+            </div>
+        </div>
+
+        <div class="post-form">
+            <h2>Зар нэмэх</h2><br>
+            <table>
+            <form action="submit_post.php" method="post">
+
+
+    <label for="door">Хаалга:</label>
+    <select id="door" name="door">
+        <option value="twodoors">2 Хаалга</option>
+        <option value="fourdoors">4 Хаалга</option>
+        <option value="sixdoors">6 Хаалга</option>
+    </select> <br><br>
+    
+
+    <label for="steeringWheel">Хүрд:</label>
+    <select id="steeringWheel" name="steeringWheel">
+        <option value="Baruun">Baruun</option>
+        <option value="Zuun">Zuun</option>
+    </select>
+
+    <label for="production-year">Үйлдвэрлэсэн он:</label>
+    <input type="date" id="production-year" name="production-year" > <br><br>
+
+    <label for="import-year">Орж ирсэн он:</label>
+    <input type="date" id="import-year" name="import-year" > <br><br>
+
+    <label for="distance">Явсан:</label>
+    <input type="text" id="distance" name="distance" placeholder="км." /> <br><br>
+
+    <label for="color2">Өнгө:</label>
+    <input type="text" id="color2" name="color2" > <br><br>
+
+
+    <label for="price">Үнэ:</label>
+    <input type="number" id="price" name="price" placeholder="₮ Үнэ тохирно" />
+
+    <label for="price-description">Үнийн дүнг бүх тэгтэй нь оруулна уу.</label>
+    <p>Жишээ нь: 12 саяыг 12000000 гэж оруулна уу.</p><br>
+
+    <label for="images">Зурагнууд:</label>
+    <input type="file" id="images" name="images" accept=".jpg, .jpeg, .png, .gif" multiple />
+    <p>Нүүр зураг оруулах бол ctrl товчлуурыг дарж зургаа сонгон оруулна.</p>
+    <p>Файлын хэмжээ нь 5 Мб, формат .jpg, .jpeg, .png, .gif байна.</p><br><br>
+
+    <label for="description">Тайлбар:</label>
+    <textarea id="description" name="description" rows="4" cols="50" maxlength="10000" placeholder="10000 тэмдэгт үлдлээ"></textarea><br><br>
+
+
+    <label for="name">Нэр:</label>
+    <input type="text" id="name" name="name" placeholder="Нэр" /><br><br>
+
+    <label for="email">Е-Мэйл хаяг:</label>
+    <input type="email" id="email" name="email" placeholder="Е-Мэйл хаяг" /><br><br>
+
+    <label for="phone">Утас:</label>
+    <input type="tel" id="phone" name="phone" placeholder="+976" /><br><br>
+
+    <input type="submit" value="Submit">
+    
+    
+
+            </form>
+        </table>
+        </div>
+        <div class="footer">
+            <p>
+                Монголын номер нэг худалдааны сайт Үнэгүй.мн-д тавтай морилно уу. 
+                Та манай цахим хуудсаар дамжуулан худалдааны бүх төрлийн салбарт онлайн хэлбэрээр үйлчлүүлэх боломжтой. 
+                Бид таны цаг завыг хэмнэн нэг дор бүх төрлийн олон мянган зарыг нэгтгэсэн цогц зарын мэдээллийг хүргэж байна. 
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
